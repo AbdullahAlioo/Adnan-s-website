@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Valued Partners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .partner-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            background: white;
+            border-radius: 12px;
+            height: 100%;
+        }
+
+        .partner-card-inner {
+            transition: all 0.3s ease;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .partner-logo {
+            filter: grayscale(30%);
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            max-width: 160px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+        }
+
+        .partner-card:hover .partner-logo {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen text-gray-800">
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <img src="logo.png" alt="Logo" class="logo-icon">
+                <div class="logo-text">TARQEEM</div>
+                <div class="logo-underline">اردو شاعری کا مستقر</div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="high" href="highlight.html">Highlights</a></li>
+                    <li><a href="sponsor.html">Sponsor</a></li>
+                </ul>
+                <button class="sign-in-btn" onclick="window.location.href='ticket.html'">Get Ticket</button>
+            </div>
+
+            <!-- Mobile Sign In (visible on mobile) -->
+            <button class="sign-in-btn" style="display: none;" id="mobileSignIn">Get Ticket</button>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu" onclick="closeMobileMenu(event)">
+            <div class="mobile-menu-content" onclick="event.stopPropagation()">
+                <div class="mobile-menu-header">
+                    <div class="logo-section">
+                        <div class="logo-icon" style="width: 32px; height: 32px; font-size: 14px;">T</div>
+                        <div class="logo-text" style="font-size: 18px;">TARQEEM</div>
+                    </div>
+                    <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
+                </div>
+
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+                    <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+                    <li><a href="highlight.html" onclick="closeMobileMenu()">Past Highlights</a></li>
+                    <li><a href="sponsor.html" onclick="closeMobileMenu()">Sponsor</a></li>
+                </ul>
+
+                <div class="mobile-sign-in">
+                    <button class="sign-in-btn" style="width: 100%; padding: 14px;" onclick="closeMobileMenu()">Get
+                        Ticket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <span class="text-gray-900">Our Valued</span>
+                <span class="text-blue-600">Partners</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                We're grateful to collaborate with these Valued Brands
+            </p>
+        </div>
+    </header>
+
+    <!-- Partners Grid -->
+    <section class="py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <!-- Partner 1 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo11.png" alt="SwiftLog" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Sharaf Exchange</h3>
+
+
+                    </div>
+                </div>
+
+                <!-- Partner 2 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo.png" alt="PixelArt" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Marhab Delivery Services</h3>
+
+
+
+                    </div>
+                </div>
+
+                <!-- Partner 3 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo3.png" alt="CodeCraft" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Eventz Tec</h3>
+
+                    </div>
+                </div>
+
+                <!-- Partner 4 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo8.png" alt="NetGuard" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">File On</h3>
+
+                    </div>
+                </div>
+
+                <!-- Partner 5 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo9.png" alt="QuantumLeap" class="max-w-full max-h-40px object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Apex</h3>
+
+                    </div>
+                </div>
+
+                <!-- Partner 6 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo7.png" alt="DataSphere" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Excel Auditing</h3>
+
+
+                    </div>
+                </div>
+
+                <!-- Partner 7 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo2.png" alt="CloudNova" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Style & Stitch</h3>
+
+                    </div>
+                </div>
+
+                <!-- Partner 8 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo5.png" alt="TechVista" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Just Drive</h3>
+
+                    </div>
+                </div>
+
+                <!-- Partner 9 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo10.png" alt="InnoWave" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Safari Club</h3>
+
+                    </div>
+                </div>
+
+                <!-- Partner 10 -->
+                <div class="partner-card">
+                    <div class="partner-card-inner">
+                        <div class="partner-logo mb-6 flex items-center justify-center">
+                            <img src="c-logo12.png" alt="FutureLabs" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">Airmers Hub</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="bg-blue-50 rounded-2xl p-8 md:p-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Explore Partnership Opportunities</h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    We're always looking to build meaningful relationships with organizations that align with our
+                    values. Let's discuss how we can work together.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition duration-300">
+                        Become a Partner <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TARQEEM</h3>
+                    <p class="text-gray-400">TarQeem is a Non-Profit Plateform in the World<</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="highlight.html" class="text-gray-400 hover:text-white">Highlights</a></li>
+                        <li><a href="sponsor.html" class="text-gray-400 hover:text-white">Sponsor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1GBDvV5VxM/" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://youtube.com/@tarqeemuae?si=nEXS72x2WQdeIOIs"
+                            class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tarqeemuae?igsh=c3hodThmZ3U0NnF0"
+                            class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@tarqeemuae?_t=ZS-8yiMYQkTrKi&_r=1"
+                            class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-top:5px;"
+                                viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                <title>TikTok icon</title>
+                                <path fill="#acaeae"
+                                    d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65c-.9-.53-1.71-1.18-2.44-1.9l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z" />
+                                <path fill="#acaeae"
+                                    d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z"
+                                    opacity=".3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 TARQEEM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation for partner cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const partnerCards = document.querySelectorAll('.partner-card');
+
+            partnerCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.classList.add('animate-fade-in');
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+
+</html>

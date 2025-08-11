@@ -450,8 +450,8 @@ body {
 .hero-text p {
     position: absolute;
     top: 50%;
-    font-size: 16px;
-    margin-top: 35px;
+    font-size: 14px;
+    margin-top: 10px;
     font-family: "Montserrat", sans-serif;
     margin-left: 40px auto;
     text-align: left;
@@ -1490,11 +1490,29 @@ body {
         font-size: 12px;
     }
 
-    .hero-btn,
-    .hero-btn2 {
+    .hero-btn {
         padding: 8px 16px;
         height: 40px;
         font-size: 14px;
+    }
+
+    .hero-btn2 {
+        
+            padding: 8px 16px;
+            height: 40px;
+            font-size: 14px;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            background:
+                linear-gradient(#fff, #ffffff) padding-box,
+                /* Inner color */
+                linear-gradient(180deg, #ffffff, #9cb1e9, #33377d) border-box;
+            /* Border gradient */
+            color: #2f57a0;
+            font-weight: bold;
+            cursor: pointer;
+        
+
     }
 
     .register-btn {
@@ -1594,7 +1612,7 @@ body {
     display: block;
     margin-left: 0px;
     width: 400px;
-    
+
     border-color: #f7ba1f;
     border-width: 4px;
     border-style: solid;
@@ -1606,7 +1624,8 @@ body {
     padding: 0;
     margin-top: 0px;
 }
-.past-container{
+
+.past-container {
     margin-left: 25px;
 }
 
@@ -1688,13 +1707,15 @@ body {
 
         /* Add padding for mobile */
     }
-    .past-text{
+
+    .past-text {
         margin-top: 20px;
         padding-left: 15px;
         margin-left: 20px;
     }
 
 }
+
 .past {
     display: flex;
     align-items: flex-start;
@@ -1742,7 +1763,7 @@ body {
     line-height: 1.7;
 }
 
-.texts3{
+.texts3 {
     font-size: 20px;
     color: #f7ba1f;
 }

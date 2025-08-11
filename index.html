@@ -2,53 +2,65 @@
 <html lang="en">
 
 <head>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TARQEEM</title>
-    <!-- Add these meta tags -->
-    <!-- Preload important resources -->
-    <link rel="preload" href="logo.png" as="image">
-    <link rel="preload" href="main.jpg" as="image">
-    <!-- Add this meta tag if not present -->
-    <meta name="theme-color" content="#1E3A8A">
+    
+  <!-- Charset & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Add mobile web app capabilities -->
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Add canonical URL -->
-    <link rel="canonical" href="https://tarqeeminternational.com/" />
-    <meta name="description"
-        content="TarQeem Mushaira - International Urdu poetry event in UAE featuring renowned poets. Join us on 23 August 2025 at Pakistan Social Center Sharjah for an evening of cultural celebration.">
-    <meta name="keywords"
-        content="Urdu poetry, Mushaira, TarQeem, Urdu literature, poetry event UAE, cultural event Sharjah, Urdu poets">
-    <meta name="author" content="TarQeem">
-    <meta property="og:title" content="TARQEEM - International Urdu Mushaira in UAE">
-    <meta property="og:description"
-        content="Join the grand International Urdu Mushaira on 23 August 2025 in Sharjah, UAE featuring renowned poets from around the world.">
-    <meta property="og:image" content="https://tarqeeminternational.com/main.jpg">
-    <meta property="og:url" content="https://tarqeeminternational.com">
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- SEO Title -->
+  <title>TARQEEM Mushaira 2025 | International Urdu Poetry Event in UAE</title>
 
-    <!-- Existing meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TARQEEM Mushaira - International Urdu Poetry Event in UAE | 23 August 2025</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- SEO Meta -->
+  <meta name="description" content="Experience TARQEEM Mushaira 2025 — the most awaited International Urdu poetry event in Sharjah, UAE. Featuring world-famous poets, cultural performances, and a grand celebration on 23 August 2025.">
+  <meta name="keywords" content="Urdu poetry UAE, Mushaira 2025, Sharjah poetry event, TarQeem Mushaira, Urdu poets UAE, Pakistan Social Center Sharjah, cultural events UAE, international poetry UAE, poetry lovers UAE, Urdu literature festival">
+  <meta name="author" content="TarQeem">
 
-    <link rel="stylesheet" href="style.css">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tarqeeminternational.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TARQEEM Mushaira 2025 | International Urdu Poetry Event in UAE">
+  <meta property="og:description" content="Join the grand Urdu poetry event in Sharjah, UAE — TARQEEM Mushaira 2025 on 23 August featuring top poets worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tarqeeminternational.com/">
+  <meta property="og:image" content="https://tarqeeminternational.com/images/event-banner.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TARQEEM Mushaira 2025 | International Urdu Poetry Event in UAE">
+  <meta name="twitter:description" content="Celebrate Urdu poetry in Sharjah with renowned poets from around the globe.">
+  <meta name="twitter:image" content="https://tarqeeminternational.com/images/event-banner.webp">
+
+  <!-- Preload Critical Assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://tarqeeminternational.com/images/event-banner.webp" as="image">
+  <link rel="preload" href="/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" as="style">
+
+  <!-- Fonts (optimized loading) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (deferred for speed) -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" media="all">
+
+  <!-- Lazy Load Script for Images -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("img").forEach(img => {
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("decoding", "async");
+      });
+    });
+  </script>
+
+
 </head>
 
 <body>
@@ -452,3 +464,4 @@
 </body>
 
 </html>
+

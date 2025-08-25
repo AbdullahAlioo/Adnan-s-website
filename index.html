@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-
+    <meta name="google-site-verification" content="Uxj_bsMF82T280tgWJY6pWilsBPR3ih88QmUFk6jdg8" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title>TARQEEM</title>
-    <link rel="icon" href="/logo.png" />
-    <meta name="google-site-verification" content="slLKqU5krX4i45gCwOJfBpQjMaVGqXC8A-tDp3rpj7U" />
+
+
     <!-- Add mobile web app capabilities -->
 
 
 
     <!-- Add canonical URL -->
-    
+    <link rel="canonical" href="https://tarqeeminternational.com/" />
     <meta name="description"
         content="TarQeem Mushaira - International Urdu poetry event in UAE featuring renowned poets. Join us on 23 August 2025 at Pakistan Social Center Sharjah for an evening of cultural celebration.">
     <meta name="keywords"
@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
@@ -42,6 +42,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        #herooo {
+            margin-top: 60px;
+            margin-left: 40%;
+        }
+
+        #text {
+            max-width: 60%;
+            margin-top: -5.5%;
+            background-color: rgba(255, 255, 255, 0);
+
+
+        }
+
+        @media (max-width: 1021px) {
+            #text {
+                max-width: 90%;
+                margin-top: 20px;
+
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -62,13 +84,14 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a class="high" href="highlight.html">Highlights</a></li>
-                        <li><a href="https://tarqeem.netlify.app/sponsor">Sponsor</a></li>
+                        <li><a href="sponsor.html">Sponsor</a></li>
                     </ul>
-                    <button class="sign-in-btn" onclick="window.location.href='ticket.html'">Get Ticket</button>
+                    <button class="sign-in-btn"  class="block">Get
+                        Ticket</button>
                 </div>
 
                 <!-- Mobile Sign In (visible on mobile) -->
-                <button class="sign-in-btn" style="display: none;" id="mobileSignIn">Get Ticket</button>
+                <button class="sign-in-btn" style="display: none;" id="mobileSignIn" class="block">Get Ticket</button>
 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
@@ -96,18 +119,19 @@
                         <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
                         <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
                         <li><a href="highlight.html" onclick="closeMobileMenu()">Past Highlights</a></li>
-                        <li><a href="https://tarqeem.netlify.app/sponsor" onclick="closeMobileMenu()">Sponsor</a></li>
+                        <li><a href="sponsor.html" onclick="closeMobileMenu()">Sponsor</a></li>
                     </ul>
 
                     <div class="mobile-sign-in">
-                        <button class="sign-in-btn" style="width: 100%; padding: 14px;" onclick="closeMobileMenu()">Get
+                        <button class="sign-in-btn" style="width: 100%; padding: 14px;" class="block"
+                            onclick="closeMobileMenu()">Get
                             Ticket
                         </button>
                     </div>
                 </div>
             </div>
         </header>
-        
+
         <div class="hero-wrapper">
             <section class="hero">
                 <div class="hero-box"></div>
@@ -121,192 +145,194 @@
                         of
                         Urdu,” it highlights the language’s rich beauty and cultural heritage.</p>
                     <div class="hero-buttons">
-                        <button class="hero-btn" onclick="window.location.href='contact.html'">Contact</button>
-                        <button class="hero-btn2" onclick="window.location.href='https://tarqeem.netlify.app/sponsor'">Sponsor</button>
+                        <button class="hero-btn" onclick="window.location.href='contact.html';">Contact</button>
+                        <button class="hero-btn2" onclick="window.location.href='sponsor.html';">Sponsor</button>
                     </div>
                 </div>
 
-                <div class="texts">INTERNATIONAL</div>
-                <div class="texts2">MUSHAIRA</div>
-                <div class="time">23 AUGUST, 2025</div>
-
-                <!-- Image Slideshow -->
-                <div class="image-slideshow">
-
-                    <img src="img2.png" alt="Hero Image" class="slide active">
-                    <img src="img3.png" alt="Hero Image" class="slide">
-                    <img src="img4.png" alt="Hero Image" class="slide">
-                    <img src="img5.png" alt="Hero Image" class="slide">
-                    <img src="img6.png" alt="Hero Image" class="slide">
-                    <img src="img7.png" alt="Hero Image" class="slide">
-                    <img src="img8.png" alt="Hero Image" class="slide">
-                    <img src="img9.png" alt="Hero Image" class="slide">
-                    <img src="img10.png" alt="Hero Image" class="slide">
-                    <img src="img11.png" alt="Hero Image" class="slide">
-                    <img src="img12.png" alt="Hero Image" class="slide">
-                    <img src="img13.png" alt="Hero Image" class="slide">
-                    <img src="img14.png" alt="Hero Image" class="slide">
-                </div>
 
 
-                <button class="register-btn" onclick="window.location.href='https://tarqeem.netlify.app/sponsor'">
-                    Get Ticket for Free
+                <button class="register-btn" onclick="window.location.href='highlight.html';">
+                    View Highlights
                 </button>
             </section>
         </div>
+        <section id="herooo">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900">Our Latest Successful
+                    Event
+                </h2>
+                <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto text-sm">
+                    Relive the magic of our most recent gathering. Stay tuned for our next event!
+                </p>
+                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-12">
+                </div>
+        </section>
 
         <div id="toast" class="toast hidden">
             <div class="toast-content">
                 <span>Buy Ticket for Free</span>
-                <button class="toast-button" onclick="window.location.href='https://tarqeem.netlify.app/sponsor'">Get Ticket</button>
+                <button class="toast-button" onclick="window.location.href='ticket.html'" class="block">Get
+                    Ticket</button>
                 <button class="toast-close">&times;</button>
             </div>
         </div>
 
         <section class="py-16 bg-gray-50" id="upcoming-event">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Upcoming Event</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Latest Successful Event
+                </h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Relive the magic of our most recent gathering. Stay tuned for our next event!
+                </p>
                 <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Event Card 1 -->
-                    <div
-                        class="bg-gradient-to-br from-indigo-900 to-indigo-800 rounded-2xl overflow-hidden shadow-xl border-2 border-yellow-400">
-                        <img src="main.jpg" alt="Event Image" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-yellow-400 mb-2">TARQEEM MUSHAIRA</h3>
-                            <p class="text-gray-200">
-                                Tarqeem International Mushaira 2025 is a grand Urdu poetry evening in UAE, uniting
-                                renowned
-                                poets worldwide. With the theme "Celebrating the Soul of Urdu", it showcases the
-                                language’s
-                                beauty and heritage.
+                <!-- Event Highlight Card -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto relative">
 
-                            </p>
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="main.jpg" alt="Event Image" class="w-full h-full object-cover">
                         </div>
-                    </div>
 
-                    <!-- Event Details Card -->
-                    <div
-                        class="bg-gradient-to-br from-indigo-900 to-indigo-800 rounded-2xl overflow-hidden shadow-xl border-2 border-yellow-400">
-                        <div class="p-6">
-                            <div class="grid grid-cols-[35%_65%]">
-                                <div class="border-b border-yellow-400 border-r">
-                                    <p class="p-4 text-yellow-400 font-medium">Date</p>
-                                </div>
-                                <div class="border-b border-yellow-400">
-                                    <p class="p-4 text-white">23 August, 2025</p>
-                                </div>
-
-                                <div class="border-b border-yellow-400 border-r">
-                                    <p class="p-4 text-yellow-400 font-medium">Location</p>
-                                </div>
-                                <div class="border-b border-yellow-400">
-                                    <p class="p-4 text-white">Pakistan Social Center<br>Sharjah UAE</p>
-                                </div>
-
-                                <div class="border-b border-yellow-400 border-r">
-                                    <p class="p-4 text-yellow-400 font-medium">Time</p>
-                                </div>
-                                <div class="border-b border-yellow-400">
-                                    <p class="p-4 text-white">6:00 PM</p>
-                                </div>
-
-                                <div class="border-r border-yellow-400">
-                                    <p class="p-4 text-yellow-400 font-medium">Price</p>
+                        <div class="md:w-1/2 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-calendar-alt text-yellow-500 text-xl"></i>
                                 </div>
                                 <div>
-                                    <p class="p-4 text-white">Free</p>
+                                    <p class="text-sm text-gray-500">Event Date</p>
+                                    <p class="font-bold text-gray-800">23 August, 2025</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Past Highlights Card -->
-                    <div class="card3">
-                        <div class="slideshow-container">
-                            <div class="slideshow">
-                                <!-- Images will be added by JavaScript -->
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">TARQEEM MUSHAIRA 2025</h3>
+                            <p class="text-gray-600 mb-6">
+                                Our most recent event was a grand celebration of Urdu poetry with the theme "Celebrating
+                                the Soul of Urdu".
+                                The evening featured renowned poets from around the world and was attended by over 500
+                                poetry enthusiasts.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Poetry</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Cultural
+                                    Event</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Urdu
+                                    Literature</span>
                             </div>
-                            <div class="slideshow-dots"></div>
-                        </div>
-                        <div class="event-details">
-                            <h2 class="event-title">HIGHLIGHTS</h2>
-                            <p class="event-description">View our previous successful events</p>
+
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i>
+                                <span>Social Center, Sharjah UAE</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-12 flex flex-wrap justify-center gap-4">
-                    <button onclick="window.location.href='https://tarqeem.netlify.app/sponsor'"
-                        class="px-6 py-3 bg-indigo-900 text-white rounded-lg font-bold hover:bg-indigo-800 transition-colors duration-300">
-                        Get Ticket
-                    </button>
-                    <button onclick="window.location.href='about.html'"
-                        class="px-6 py-3 border-2 border-indigo-900 text-indigo-900 rounded-lg font-bold hover:bg-indigo-50 transition-colors duration-300">
-                        About
-                    </button>
-                    <button onclick="window.location.href='https://tarqeem.netlify.app/sponsor'"
-                        class="px-6 py-3 bg-gray-100 text-indigo-900 rounded-lg font-bold hover:bg-gray-200 transition-colors duration-300">
-                        Become a Sponsor
-                    </button>
+                <!-- Notification Form -->
+                <div
+                    class="mt-16 max-w-2xl mx-auto bg-gradient-to-br from-indigo-900 to-indigo-800 rounded-2xl p-8 shadow-xl">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2 text-center">Get Notified About Our Next Event
+                    </h3>
+                    <p class="text-gray-200 text-center mb-6">
+                        Enter your email below to be the first to know about our upcoming poetry gathering
+                    </p>
+
+                    <form id="notification-form" class="space-y-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-yellow-400 mb-1">Email
+                                Address</label>
+                            <input type="email" id="email-not" name="email" required
+                                class="form-input w-full px-4 py-3 rounded-lg bg-indigo-800 border border-indigo-700 text-white placeholder-indigo-400 focus:outline-none focus:border-yellow-400"
+                                placeholder="your@email.com">
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" id="consent" name="consent" required
+                                class="h-4 w-4 text-yellow-500 focus:ring-yellow-400 border-gray-300 rounded">
+                            <label for="consent" class="ml-2 block text-sm text-gray-300">
+                                I agree to receive updates about future events
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full mt-4 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-indigo-900 font-bold rounded-lg transition-colors duration-300 flex items-center justify-center">
+                            <i class="fas fa-bell mr-2"></i> Notify Me
+                        </button>
+                    </form>
+
+                    <div id="success-message"
+                        class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-lg text-center">
+                        <i class="fas fa-check-circle mr-2"></i> Thank you! We'll notify you about our next event.
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Poets Marquee -->
         <section class="py-12 border-t border-b border-gray-200 bg-white">
-            <div class="marquee-pause overflow-hidden">
-                <div class="people-name1 marquee-animate whitespace-nowrap flex gap-4">
-                    <!-- Poet 1 -->
-                    <button
-                        class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="image1.jpg" alt="NADEEM BHABHA" class="w-10 h-10 rounded-full object-cover mr-3">
-                        <span class="font-medium">Afzal Khan</span>
-                        <span class="ml-4 text-gray-400">→</span>
-                    </button>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Featured Poets
+                </h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Relive the magic of our most recent gathering. Stay tuned for our next event!
+                </p>
+                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
 
-                    <!-- Poet 2 -->
-                    <button
-                        class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="image2.jpg" alt="GHAZANFAR HASHMI" class="w-10 h-10 rounded-full object-cover mr-3">
-                        <span class="font-medium">Dilawar Ali Aazar</span>
-                        <span class="ml-4 text-gray-400">→</span>
-                    </button>
+                <div class="marquee-pause overflow-hidden">
+                    <div class="people-name1 marquee-animate whitespace-nowrap flex gap-4">
+                        <!-- Poet 1 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image1.jpg" alt="NADEEM BHABHA" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Afzal Khan</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
 
-                    <!-- Poet 3 -->
-                    <button
-                        class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="image3.jpg" alt="AFZAL KHAN" class="w-10 h-10 rounded-full object-cover mr-3">
-                        <span class="font-medium">Shahaz Nayyar</span>
-                        <span class="ml-4 text-gray-400">→</span>
-                    </button>
+                        <!-- Poet 2 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image2.jpg" alt="GHAZANFAR HASHMI"
+                                class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Dilawar Ali Aazar</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
 
-                    <!-- Poet 4 -->
-                    <button
-                        class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="image4.jpg" alt="Fareeha Naqvi" class="w-10 h-10 rounded-full object-cover mr-3">
-                        <span class="font-medium">Fareeha Naqvi</span>
-                        <span class="ml-4 text-gray-400">→</span>
-                    </button>
+                        <!-- Poet 3 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image3.jpg" alt="AFZAL KHAN" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Shahaz Nayyar</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
 
-                    <!-- Poet 5 -->
-                    <button
-                        class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="image5.jpg" alt="Dilawar Ali Aazar" class="w-10 h-10 rounded-full object-cover mr-3">
-                        <span class="font-medium">Ghazanfar Hashmi</span>
-                        <span class="ml-4 text-gray-400">→</span>
-                    </button>
+                        <!-- Poet 4 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image4.jpg" alt="Fareeha Naqvi" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Fareeha Naqvi</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
 
-                    <!-- Poet 6 -->
-                    <button
-                        class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                        <img src="image6.jpg" alt="Abbas Qamar" class="w-10 h-10 rounded-full object-cover mr-3">
-                        <span class="font-medium">Nasar Naeem</span>
-                        <span class="ml-4 text-gray-400">→</span>
-                    </button>
+                        <!-- Poet 5 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image5.jpg" alt="Dilawar Ali Aazar"
+                                class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Ghazanfar Hashmi</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+
+                        <!-- Poet 6 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image6.jpg" alt="Abbas Qamar" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Nasar Naeem</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
         </section>
 
         <!-- Previous Highlights Section -->
@@ -327,69 +353,29 @@
                 <img src="past5.jpg" alt="Past Event 5" class="past-image">
             </div>
 
-            <div class="past-text">
-                <h3>
-                    International Urdu Poetry Symposium (Mushaira) in Sharjah held by TARQEEM<br>
-                    in titled <br>
-                    'Hum Naghma Sraa Kuch Ghazlou'n Ke '<br>
+            <div class="bg-gray-100 p-8 rounded-lg" id="text">
+                <h3 class="text-2xl font-bold mb-4">International Urdu Poetry Symposium (Mushaira) in Sharjah held by
+                    TARQEEM</h3>
+                <p class="text-gray-700 mb-4 italic">in titled 'Tarqeem Mushaira'</p>
+                <p class="text-gray-700 mb-4">
+                    An International Mushaira was held at Pakistan Social Center Sharjah on 23th August 2025. The
+                    event was organised by Tarqeem, in collaboration with Chai Shai Restaurant and Cafe. The mushairah
+                    set a precedent, as this was Tarqeem's first international mushairah and was attended by renowned
+                    poets from India, Pakistan and the UAE.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    Presided by poet, writer and critic, Akhter Usman and attended by Dr. Sabahat Asim Wasti, Syed
+                    Dilawar Ali Aazar, Ali Zeerak, Afzal Khan, Shahaz Nayyar, Fareeha Naqvi, Ghazanfar Hashmi,
+                    Nasar Naeem, and many other prominent poets, the event was a grand success.
 
-                    An International Mushaira was held at Pakistan Social Center Sharjah on Sunday,<br>19th May 2024
-
-                    The event was organised by Tarqeem, in collaboration with <br>Chai Shai Restaurant and Cafe.
-
-                    The mushairah set a precedent, as this was Tarqeem's<br>first international mushairah and was
-                    attended
-                    by
-                    renowned poets from India, Pakistan <br>and the UAE. Presided by poet, writer and critic, Akhter
-                    Usman
-                    and
-                    attended by <br>Dr. Sabahat Asim Wasti, Syed Sarosh Asif, Naveen Joshi, Ashwani Mittal, <br>Dilawar
-                    Ali
-                    Aazar,
-                    Ali Zeerak, Ehya Bhojpuri, Nilofer Afzal, Usman Habeeb, Ahmed<br>Jahangeer, Malik Irfan, Abrar Umar
-                    and
-                    Muskan Syed Riaz<br>
-
-                    The event concluded on a high note, with the audience visibly moved and <br> enriched — a true
-                    testament
-                    to
-                    the enduring power of Urdu poetry. Tarqeem successfully<br> set a new standard, not just for
-                    literary
-                    gatherings in the UAE, but for international poetic discourse.<br>
-
-                </h3>
+                </p>
+                <p class="text-gray-700">
+                    The event concluded on a high note, with the audience visibly moved and enriched — a true testament
+                    to the enduring power of Urdu poetry. Tarqeem successfully set a new standard, not just for literary
+                    gatherings in the UAE, but for international poetic discourse.
+                </p>
             </div>
         </div>
-        <!-- YouTube Videos Section -->
-        <section class="py-16 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our YouTube</h2>
-                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Video 1 -->
-                    <div class="video-container">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/Og3aTOlTN8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    
-                    <!-- Video 2 -->
-                    <div class="video-container">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/c401MyYkmcU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    
-                    <!-- Video 3 -->
-                    <div class="video-container">
-                        <iframe class="youtube-video" src="https://www.youtube.com/embed/vf80T43qNVI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                
-                <div class="mt-12 text-center">
-                    <a href="https://www.youtube.com/@Tarqeemuae" target="_blank" class="inline-block px-6 py-3 bg-indigo-900 text-white rounded-lg font-bold hover:bg-red-700 transition-colors duration-300">
-                        Visit Channel
-                    </a>
-                </div>
-            </div>
-        </section>
         <!-- Footer -->
         <!-- Footer -->
         <footer class="bg-gray-800 text-white mt-16">
@@ -403,7 +389,7 @@
                         <h4 class="font-semibold mb-4">Company</h4>
                         <ul class="space-y-2">
                             <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
-                            <li><a href="https://tarqeem.netlify.app/sponsor" class="text-gray-400 hover:text-white">Sponsor</a></li>
+                            <li><a href="sponsor.html" class="text-gray-400 hover:text-white">Sponsor</a></li>
                             <li><a href="highlight.html" class="text-gray-400 hover:text-white">Highlights</a></li>
                         </ul>
                     </div>
@@ -452,9 +438,6 @@
                 </div>
             </div>
         </footer>
-        <a href="https://wa.me/+971543038254" class="whatsapp-float pulse" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i>
-        </a>
     </div>
     <script type="application/ld+json">
         {
@@ -476,10 +459,10 @@
             "addressCountry": "United Arab Emirates"
             }
         },
-        "image": "https://www.tarqeeminternational.com/main.jpg",
+        "image": "https://tarqeeminternational.com/main.jpg",
         "offers": {
             "@type": "Offer",
-            "url": "https://www.tarqeeminternational.com",
+            "url": "https://tarqeeminternational.com/ticket.html",
             "price": "0",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
@@ -488,24 +471,70 @@
         "organizer": {
             "@type": "Organization",
             "name": "TarQeem",
-            "url": "https://www.tarqeeminternational.com"
+            "url": "https://tarqeeminternational.com"
         }
         }
         </script>
+    <script>
+        document.getElementById('notification-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Get the email value
+            const email = document.getElementById('email-not').value;
+            const consent = document.getElementById('consent').checked;
+
+            // Validate inputs
+            if (!email || !consent) {
+                alert('Please provide a valid email and agree to receive updates');
+                return;
+            }
+
+            try {
+                // Send data to server
+                const response = await sendDataToServer({ email, consent });
+
+                // If successful, show success message
+                document.getElementById('notification-form').classList.add('hidden');
+                document.getElementById('success-message').classList.remove('hidden');
+
+                // Reset form after 5 seconds
+                setTimeout(function () {
+                    document.getElementById('notification-form').reset();
+                    document.getElementById('notification-form').classList.remove('hidden');
+                    document.getElementById('success-message').classList.add('hidden');
+                }, 5000);
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your email. Please try again.');
+            }
+        });
+
+        async function sendDataToServer(data) {
+            try {
+                // Construct the URL with parameters
+                const url = `https://abdullahalioo-adnan-bhai-server.hf.space/wait/${encodeURIComponent(data.email)}`;
+
+                // Send the GET request
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('Error sending data:', error);
+                throw error;
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

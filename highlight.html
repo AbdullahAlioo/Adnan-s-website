@@ -31,7 +31,8 @@
     /* Highlights container */
     .highlights-section {
         text-align: center;
-        padding: 40px 20px 30px; /* reduced bottom padding */
+        padding: 40px 20px 30px;
+        /* reduced bottom padding */
     }
 
     /* Main title */
@@ -69,7 +70,8 @@
         padding: 20px;
         display: flex;
         flex-direction: row;
-        align-items: flex-start; /* Align items to top */
+        align-items: flex-start;
+        /* Align items to top */
         gap: 40px;
     }
 
@@ -206,10 +208,11 @@
         .Highlights {
             font-size: 32px;
         }
+
         .year {
             font-size: 28px;
         }
-        
+
         .past {
             flex-direction: column;
             padding: 10px;
@@ -282,9 +285,40 @@
             font-size: 16px;
         }
     }
+
+    .past-image {
+        position: absolute;
+        /* stack all images */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+        /* smooth fade */
+    }
+
+    .past-container {
+        position: relative;
+        /* needed for absolute positioning */
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        overflow: hidden;
+    }
+
+    .past-image.active {
+        opacity: 1;
+        /* only active image is visible */
+    }
 </style>
 
 <link rel="stylesheet" href="style.css">
+
 <body>
     <header class="header">
         <nav class="navbar">
@@ -365,6 +399,48 @@
 
         <div class="past-text">
             <div class="bg-gray-100 p-8 rounded-lg" id="text">
+                <h3 class="text-2xl font-bold mb-4">TarQeem International Mushaira 2025 </h3>
+                <p class="text-gray-700 mb-4 italic">Tarqeem UAE, in collaboration with Sharaf Exchange, hosted a truly
+                    memorable evening where the magic of words captivated every heart.</p>
+                <p class="text-gray-700 mb-4">
+                    Held on 23rd August 2025 at the Pakistan Social Centre Sharjah, the grand literary gathering brought
+                    together renowned poets from the USA, Canada, Qatar, India, and Pakistan, who enthralled the
+                    audience with their soulful verses. The evening was further graced by the presence of leading
+                    businessmen and CEOs from across the UAE, adding prestige to the occasion.
+
+                </p>
+                <p class="text-gray-700 mb-4">
+                    The distinguished guests of honor were Dr. Sabahat Asim Wasiti and Mr. Shahabuddin, whose presence
+                    added immense value to the event. During the ceremony, eminent poets were presented with honorary
+                    shields along with Ajrak, a cultural symbol of Saraiki heritage, as a token of appreciation.
+
+
+                </p>
+                <p class="text-gray-700">
+                    The Mushaira not only stood as a shining example of promoting Urdu literature but also carried a
+                    powerful message of cultural harmony and community unity.
+            </div>
+        </div>
+    </div>
+
+    <div class="highlights-section">
+        <div class="Highlights">
+            Highlights <span class="year">2024</span>
+        </div>
+    </div>
+
+    <div class="past">
+        <div class="past-container">
+            <img src="past1-24.jpg" alt="Past Event 1" class="past-image active">
+            <img src="past2-24.jpg" alt="Past Event 2" class="past-image">
+            <img src="past3-24.jpg" alt="Past Event 3" class="past-image">
+            <img src="past4-24.jpg" alt="Past Event 4" class="past-image">
+            <img src="past5-24.jpg" alt="Past Event 5" class="past-image">
+            <img src="past6-24.jpg" alt="Past Event 5" class="past-image">
+        </div>
+
+        <div class="past-text">
+            <div class="bg-gray-100 p-8 rounded-lg" id="text">
                 <h3 class="text-2xl font-bold mb-4">International Urdu Poetry Symposium (Mushaira) in Sharjah held by
                     TARQEEM</h3>
                 <p class="text-gray-700 mb-4 italic">in titled 'Tarqeem Mushaira'</p>
@@ -439,6 +515,23 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const pastContainers = document.querySelectorAll(".past-container");
+
+            pastContainers.forEach(container => {
+                const images = container.querySelectorAll(".past-image");
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    images[currentIndex].classList.remove("active");
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add("active");
+                }, 1500); // change every 1.5 seconds
+            });
+        });
+
+    </script>
 </body>
+
 </html>

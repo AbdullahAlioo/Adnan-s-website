@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const pastContainer = document.querySelector(".past-container");
 
 // Load past1–past6 dynamically
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 5; i++) {
     const img = document.createElement("img");
     img.src = `past${i}.jpg`;
     img.alt = `Past Image ${i}`;
@@ -249,25 +249,120 @@ let toastInterval = setInterval(() => {
     showToast();
 }, 15000); // 15 seconds
 
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                document.getElementById('successModal').classList.remove('hidden');
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Send Message';
-                submitBtn.disabled = false;
-                this.reset();
-            }, 1500);
-        });
-        
-        function closeModal() {
-            document.getElementById('successModal').classList.add('hidden');
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Show loading state
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+    submitBtn.disabled = true;
+
+    // Simulate form submission
+    setTimeout(() => {
+        document.getElementById('successModal').classList.remove('hidden');
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Send Message';
+        submitBtn.disabled = false;
+        this.reset();
+    }, 1500);
+});
+
+function closeModal() {
+    document.getElementById('successModal').classList.add('hidden');
+}
+
+// Countdown Timer with Auto-Destroy
+document.addEventListener("DOMContentLoaded", function () {
+    function updateCountdown() {
+        const eventDate = new Date("August 23, 2025 18:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        // If countdown is over
+        if (distance < 0) {
+            const countdownSection = document.querySelector(".bg-amber-600");
+            if (!document.getElementById("expired-message")) {
+                const expiredMsg = document.createElement("div");
+                expiredMsg.id = "expired-message";
+                expiredMsg.className =
+                    "expired-message mt-6 p-4 bg-red-600 text-white text-center rounded";
+                expiredMsg.innerHTML = `
+              <h3 class="text-2xl font-bold mb-2">🎉 Event Completed</h3>
+              <p class="text-lg">The International Mushaira 2025 has concluded. Thank you for your participation!</p>
+            `;
+                countdownSection.appendChild(expiredMsg);
+            }
+
+            // Reset to 00
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+
+            setTimeout(destroyCountdown, 8000);
+            return;
         }
 
+        // Calculate
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        // Update UI with leading zeros
+        document.getElementById("days").textContent = days
+            .toString()
+            .padStart(2, "0");
+        document.getElementById("hours").textContent = hours
+            .toString()
+            .padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes
+            .toString()
+            .padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds
+            .toString()
+            .padStart(2, "0");
+    }
+
+    function destroyCountdown() {
+        const countdownSection = document.querySelector(".bg-amber-600");
+        const countdownBoxes = document.querySelectorAll(
+            ".bg-amber-600 .flex.space-x-6 > div"
+        );
+
+        // Fade-out effect
+        countdownBoxes.forEach((box) => {
+            box.style.transition = "opacity 1s ease";
+            box.style.opacity = "0";
+        });
+
+        setTimeout(() => {
+            const countdownContainer = document.querySelector(
+                ".bg-amber-600 .flex.space-x-6"
+            );
+            if (countdownContainer) {
+                countdownContainer.remove();
+
+                const sectionTitle = countdownSection.querySelector("h2");
+                if (sectionTitle) {
+                    sectionTitle.textContent = "EVENT COMPLETED";
+                }
+
+                const dateText = countdownSection.querySelector("p");
+                if (dateText) {
+                    dateText.innerHTML =
+                        "✅ Successfully held on 23 August, 2025";
+                }
+            }
+        }, 1000);
+
+        clearInterval(countdownInterval);
+    }
+
+    // Start countdown
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
+});

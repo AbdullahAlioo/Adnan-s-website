@@ -1244,7 +1244,9 @@ body {
     font-weight: bold;
 }
 
-
+#upcoming-event {
+    margin-top: 40px;
+}
 
 /* Add this to properly structure your hero section */
 .hero-box {
@@ -1358,14 +1360,17 @@ body {
     .register-btn,
     .blur,
     .herooo,
-    .hero-wrapper,
+    .hero-text p,
+    .hero-btn,
+    .hero-btn2,
+    .hero-text,
     .time {
         display: none;
     }
 
     /* Adjust hero-box for mobile */
     .next-eve {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
         margin-top: -20px;
@@ -1375,46 +1380,16 @@ body {
     .hero-box {
         width: 100%;
         height: 300px;
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
         background: linear-gradient(90deg, #0a2271, #1f43b9);
     }
 
-    /* Center the hero text and adjust its styling */
-    .hero-text {
-        position: relative;
-        top: auto;
-        margin: 40px auto;
-        text-align: center;
-        width: 90%;
-        max-width: 500px;
-        background: linear-gradient(90deg, #fbbf24, #fbbf24, #fbbf24);
-        -webkit-background-clip: text;
-        background-clip: text;
-    }
+    
 
-    .hero-text p {
-        position: relative;
-        margin: 20px auto;
-        text-align: center;
-        color: #ffffff;
-    }
-
-    /* Adjust hero buttons */
-    .hero-btn,
-    .hero-btn2 {
-        position: relative;
-        margin: 20px auto;
-        display: block;
-        width: 80%;
-        max-width: 200px;
-    }
-
-    .hero-btn2 {
-        margin-left: auto;
-        margin-top: 10px;
-    }
+    
+    
 
     /* Center and adjust the register button */
     .register-btn {
@@ -1433,7 +1408,8 @@ body {
 
     /* Move up the upcoming event section */
     #upcoming-event {
-        margin-top: -100vh;
+        margin-top: 50px;
+        color: #fff6f6;
         /* Reduced from 500px to 50px */
         padding-top: 0;
         /* Ensure no extra padding pushes it down */

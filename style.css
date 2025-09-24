@@ -1244,9 +1244,7 @@ body {
     font-weight: bold;
 }
 
-#upcoming-event {
-    margin-top: 40px;
-}
+
 
 /* Add this to properly structure your hero section */
 .hero-box {
@@ -1360,6 +1358,7 @@ body {
     .register-btn,
     .blur,
     .herooo,
+    .hero-wrapper,
     .time {
         display: none;
     }
@@ -1434,7 +1433,7 @@ body {
 
     /* Move up the upcoming event section */
     #upcoming-event {
-        margin-top: 50px;
+        margin-top: -100vh;
         /* Reduced from 500px to 50px */
         padding-top: 0;
         /* Ensure no extra padding pushes it down */

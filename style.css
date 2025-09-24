@@ -126,8 +126,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     font-family: inherit;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.2);
+   
 }
 
 .sign-in-btn:hover {
@@ -421,7 +420,7 @@ body {
     background: linear-gradient(90deg, #0a2271, #1f43b9);
     width: 430px;
     height: 480px;
-    position: absolute;
+    position:static;
 }
 
 .triangle-clippath {
@@ -569,7 +568,7 @@ body {
 .register-btn {
     position: absolute;
     top: 350px;
-    margin-left: 840px;
+    margin-left: 860px;
     transform: translate(-50%, -50%);
     background: linear-gradient(90deg, #1c46d0, #1c46d0, #1c46d0);
     position: absolute;
@@ -1010,8 +1009,9 @@ body {
 .register-btn2 {
     position: absolute;
     width: 250px;
+    
     top: 680px;
-    left: -300px;
+    left: 430px;
     font-family: "Roboto Mono", monospace;
     transform: translate(-50%, -50%);
     background: linear-gradient(90deg, #333366, #333366, #333366);
@@ -1245,7 +1245,7 @@ body {
 }
 
 #upcoming-event {
-    margin-top: 400px;
+    margin-top: 40px;
 }
 
 /* Add this to properly structure your hero section */
@@ -1359,6 +1359,7 @@ body {
     .texts2,
     .register-btn,
     .blur,
+    .herooo,
     .time {
         display: none;
     }
@@ -2010,70 +2011,13 @@ body {
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: not-allowed;
+    
     /* always show blocked cursor */
     font-size: 16px;
 }
 
 /* Tooltip box */
-.sign-in-btn::after {
-    content: "Event has completed, wait for our next event";
-    position: absolute;
-    top: 120%;
-    /* tooltip below */
-    left: -10%;
-    transform: translateX(-50%);
-    background: #333;
-    color: #fff;
-    font-size: 13px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    z-index: 1000;
-}
 
-/* Show tooltip on hover */
-.sign-in-btn:hover::after {
-    opacity: 1;
-}
-
-
-
-/* Tooltip box */
-.block::after {
-    content: "Event has completed, wait for our next event";
-    position: absolute;
-    top: 120%;
-    /* tooltip below */
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: #fff;
-    font-size: 13px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    z-index: 1000;
-}
-
-.success-badge {
-    position: absolute;
-    top: -12px;
-    right: 20px;
-    background-color: #f59e0b;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
 
 .form-input {
     transition: all 0.3s ease;
@@ -2087,5 +2031,4 @@ body {
 .block:hover::after {
     opacity: 1;
 }
-
 

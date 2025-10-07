@@ -2,294 +2,486 @@
 <html lang="en">
 
 <head>
+    <meta name="google-site-verification" content="Uxj_bsMF82T280tgWJY6pWilsBPR3ih88QmUFk6jdg8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>TARQEEM</title>
+
+
+    <!-- Add mobile web app capabilities -->
+
+
+
+    <!-- Add canonical URL -->
+    <link rel="canonical" href="https://tarqeeminternational.com/" />
+    <meta name="description"
+        content="TarQeem Mushaira - International Urdu poetry event in UAE featuring renowned poets. Join us on 23 August 2025 at Pakistan Social Center Sharjah for an evening of cultural celebration.">
+    <meta name="keywords"
+        content="Urdu poetry, Mushaira, TarQeem, Urdu literature, poetry event UAE, cultural event Sharjah, Urdu poets , Urdu poetry UAE, Mushaira 2025, Sharjah poetry event, TarQeem Mushaira, Urdu poets UAE, Pakistan Social Center Sharjah, cultural events UAE, international poetry UAE, poetry lovers UAE, Urdu literature festival">
+    <meta name="author" content="TarQeem">
+    <meta property="og:title" content="TARQEEM - International Urdu Mushaira in UAE">
+    <meta property="og:description"
+        content="Join the grand International Urdu Mushaira on 23 August 2025 in Sharjah, UAE featuring renowned poets from around the world.">
+
+
+    <!-- Existing meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>TARQEEM Mushaira - International Urdu Poetry Event in UAE | 23 August 2025</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
     <style>
-        .founder-image {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 5px solid #fff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        #text {
+            max-width: 60%;
+            margin-top: -5.5%;
+            background-color: rgba(255, 255, 255, 0);
+
+
         }
 
+        @media (max-width: 1021px) {
+            #text {
+                max-width: 90%;
+                margin-top: 20px;
+            }
+        }
+
+        .herooo {
+            margin-top: -32%;
+            margin-left: 46vw;
+            position: absolute;
+        }
+
+        #text {
+            max-width: 60%;
+            margin-top: -6%;
+            background-color: rgba(255, 255, 255, 0);
+
+
+        }
+
+        @media (max-width: 1021px) {
+            #text {
+                max-width: 90%;
+                margin-top: 20px;
+
+            }
+        }
+
+        /* YouTube Videos Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .youtube-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .founder-image {
-                width: 150px;
-                height: 150px;
+            .grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .video-container {
+                margin-bottom: 20px;
+            }
+
+            .video-container:last-child {
+                margin-bottom: 0;
             }
         }
     </style>
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="bg-gray-50 font-sans">
-    <!-- Navigation (optional) -->
-    <header class="header">
-        <nav class="navbar">
-            <!-- Logo Section -->
-            <div class="logo-section">
-                <img src="logo.png" alt="Logo" class="logo-icon">
-                <div class="logo-text">TARQEEM</div>
-                <div class="logo-underline">اردو شاعری کا مستقر</div>
-            </div>
-
-            <!-- Desktop Navigation -->
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a class="high" href="highlight.html">Highlights</a></li>
-                    <li><a href="https://tarqeem.netlify.app/sponsor">Sponsor</a></li>
-                </ul>
-                <button class="sign-in-btn" onclick="window.location.href='ticket.html'">Get Ticket</button>
-            </div>
-
-            <!-- Mobile Sign In (visible on mobile) -->
-            <button class="sign-in-btn" style="display: none;" id="mobileSignIn" onclick="window.location.href='ticket.html'">Get Ticket</button>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body>
+    <div class="site-wrapper">
+        <header class="header">
+            <nav class="navbar">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <img src="logo.png" alt="Logo" class="logo-icon">
+                    <div class="logo-text">TARQEEM</div>
+                    <div class="logo-underline">اردو شاعری کا مستقر</div>
                 </div>
-            </button>
-        </nav>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu" onclick="closeMobileMenu(event)">
-            <div class="mobile-menu-content" onclick="event.stopPropagation()">
-                <div class="mobile-menu-header">
-                    <div class="logo-section">
-                        <div class="logo-icon" style="width: 32px; height: 32px; font-size: 14px;">T</div>
-                        <div class="logo-text" style="font-size: 18px;">TARQEEM</div>
+                <!-- Desktop Navigation -->
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a class="high" href="highlight.html">Highlights</a></li>
+                        <li><a href="sponsor.html">Sponsor</a></li>
+                    </ul>
+                    <button class="sign-in-btn" onclick="window.location.href='ticket.html'">Get Ticket</button>
+                </div>
+
+                <!-- Mobile Sign In (visible on mobile) -->
+                <button class="sign-in-btn" style="display: none;" id="mobileSignIn">Get Ticket</button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
-                </div>
+                </button>
+            </nav>
 
-                <ul class="mobile-nav-links">
-                    <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
-                    <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
-                    <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
-                    <li><a href="highlight.html" onclick="closeMobileMenu()">Past Highlights</a></li>
-                    <li><a href="https://tarqeem.netlify.app/sponsor" onclick="closeMobileMenu()">Sponsor</a></li>
-                </ul>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu" onclick="closeMobileMenu(event)">
+                <div class="mobile-menu-content" onclick="event.stopPropagation()">
+                    <div class="mobile-menu-header">
+                        <div class="logo-section">
+                            <div class="logo-icon" style="width: 32px; height: 32px; font-size: 14px;">T</div>
+                            <div class="logo-text" style="font-size: 18px;">TARQEEM</div>
+                        </div>
+                        <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
+                    </div>
 
-                <div class="mobile-sign-in">
-                    <button class="sign-in-btn" style="width: 100%; padding: 14px;" onclick="closeMobileMenu()">Get
-                        Ticket
-                    </button>
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+                        <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+                        <li><a href="contact.html" onclick="closeMobileMenu()">Contact</a></li>
+                        <li><a href="highlight.html" onclick="closeMobileMenu()">Past Highlights</a></li>
+                        <li><a href="sponsor.html" onclick="closeMobileMenu()">Sponsor</a></li>
+                    </ul>
+
+                    <div class="mobile-sign-in">
+                        <button class="sign-in-btn" style="width: 100%; padding: 14px;" onclick="closeMobileMenu()">Get
+                            Ticket
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Heading -->
-        <div class="text-center mb-16">
-            <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-                About Us
-            </h1>
-            <p class="mt-5 max-w-xl mx-auto text-xl text-gray-500">
-                Learn more about who we are and what we stand for
-            </p>
-        </div>
-
-        <!-- Description -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden p-8 mb-16">
-            <div class="md:flex">
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:w-48 rounded-lg" src="logo.png" alt="Our team working">
+        </header>
+        <button class="register-btn" onclick="window.location.href='ticket.html';">
+                    Get Ticket for Free
+                </button>
+        <div class="hero-wrapper">
+            <section class="hero">
+                <div class="hero-box"></div>
+                <div class="triangle-clippath"></div>
+                <div class="hero-text">
+                    <h1 class="hero-title">TARQEEM MUSHAIRA</h1>
+                    <p class="hero-subtitle" class="wow">Tarqeem International Mushaira 2025 is a Grand Urdu Poetry
+                        evening
+                        held
+                        in the UAE, bringing together renowned poets from around the world. Themed “Celebrating the Soul
+                        of
+                        Urdu,” it highlights the language’s rich beauty and cultural heritage.</p>
+                    <div class="hero-buttons">
+                        <button class="hero-btn" onclick="window.location.href='contact.html';">Contact</button>
+                        <button class="hero-btn2" onclick="window.location.href='sponsor.html';">Sponsor</button>
+                    </div>
                 </div>
-                <div class="mt-4 md:mt-0 md:ml-6">
 
-                    <p class="mt-2 text-gray-600">
-                        TarQeem is a non-profit platform dedicated to the preservation and promotion of Urdu
-                        literature, language, and culture. We believe that Urdu is not just a language, but a reflection
-                        of centuries of history, tradition, and artistic expression.
-
-                        Our mission is to bring people together across borders and backgrounds through meaningful
-                        literary and cultural events. By hosting mushairas, symposiums, workshops, and community
-                        gatherings, we aim to highlight the richness of our shared heritage and inspire a deeper
+                <section class="herooo">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900">Our Comming
+                            Event
+                        </h2>
+                        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto text-sm">
+                            Relive the magic of our most recent gathering. Stay tuned for our next event!
+                        </p>
+                        <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-12">
+                        </div>
                         
-                    </p>
-                    <p class="mt-4 text-gray-600">
-                        appreciation for the beauty, eloquence, and universality of the Urdu language.
+                </section>
 
-                        Through our initiatives, TarQeem strives to create a vibrant platform where established and
-                        emerging voices can be heard, celebrated, and passed on to future generations.
-                    </p>
-                </div>
+        </div>
+
+        <div id="toast" class="toast hidden">
+            <div class="toast-content">
+                <span>Buy Ticket for Free</span>
+                <button class="toast-button" onclick="window.location.href='ticket.html'">Get Ticket</button>
+                <button class="toast-close">&times;</button>
             </div>
         </div>
 
-        <!-- Values Section -->
-        <div class="mb-16">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Core Values</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-indigo-600 text-4xl mb-4">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Innovation</h3>
-                    <p class="text-gray-600">Reimagining Urdu literature through creativity and technology for the modern era.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-indigo-600 text-4xl mb-4">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Integrity</h3>
-                    <p class="text-gray-600"> Honoring the purity and dignity of Urdu literature while preserving its timeless legacy</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="text-indigo-600 text-4xl mb-4">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Community</h3>
-                    <p class="text-gray-600"> Uniting writers, readers, and scholars in a shared literary journey.</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Founder Section -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden p-8">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Founder</h2>
-            <div class="flex flex-col items-center">
-                <div class="rounded-full overflow-hidden mb-6">
-                    <img class="founder-image rounded-full" src="founder.jpg" alt="Founder Name">
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">Adnan Munawar</h3>
-                <p class="text-indigo-600 mb-4">Founder</p>
-                <div class="max-w-2xl text-center">
-                    <p class="text-gray-600 mb-4">
-                        Adnan Munawar
+        <section class="py-16" id="upcoming-event"></section>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" style="z-index: 999; position: relative; color: rgb(255, 255, 255);">Upcoming Event</h2>
+            <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
 
-                        is a distinguished poet and literary figure, passionately committed to the
-                        promotion of Urdu literature and culture in the United Arab Emirates. With a deep appreciation
-                        for the artistic and historical value of the Urdu language, he has dedicated his work to
-                        creating meaningful platforms for poets, writers, and literature enthusiasts.
+            <div class="grid grid-cols-1 lg:grid-cols-1 gap-8">
+                <!-- Event Card -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden mx-auto relative">
+                    <div class="flex flex-col lg:flex-row">
+                        <div class="lg:w-1/2">
+                            <img src="event oct.jpg" alt="Event Image" style="max-height: 525px;">
+                        </div>
 
-                        His debut poetry collection (Book), Tashbeeh, was published by Bazm-e-Urdu Dubai and formally
-                        inaugurated at the Sharjah International Book Fair 2024, earning him recognition for his
-                        eloquence, depth, and unique poetic voice. Adnan is widely respected in literary circles across
-                        the world for his ability to bridge cultural and geographical divides through
-                        the art of words.
+                        <div class="lg:w-1/2 p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-calendar-alt text-yellow-500 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Event Date</p>
+                                    <p class="font-bold text-gray-800">5 octuber, 2025</p>
+                                </div>
+                            </div>
 
-                        In 2023, he founded TarQeem, a non-profit literary platform with the vision of fostering
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">TARQEEM MUSHAIRA 2025</h3>
+                            <p class="text-gray-600 mb-6">
+                                After the remarkable success of the Tarqeem International Mushaira – UAE Chapter, we are
+                                now bringing this prestigious literary gathering to the historic and culturally vibrant
+                                city of Lahore.
 
-                    </p>
-                    <p class="text-gray-600">
+                                The Tarqeem International Mushaira – Pakistan Chapter will feature some of the most
+                                talented and dynamic voices of the new generation of poets.
 
-                    <div class="mt-6 flex justify-center space-x-4">
-                        <a href="https://www.facebook.com/share/1JYvJKRoqV/" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://youtube.com/@tarqeemuae?si=nEXS72x2WQdeIOIs"
-                            class="text-gray-400 hover:text-white">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://www.instagram.com/amunawar73?igsh=ZmYzY2J0Z3N5c2hm"
-                            class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@adnanmunawar24?_t=ZS-8ylGbVAjma0&_r=1"
-                            class="text-gray-400 hover:text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-top:5px;"
-                                viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-                                <title>TikTok icon</title>
-                                <path fill="#acaeae"
-                                    d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65c-.9-.53-1.71-1.18-2.44-1.9l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z" />
-                                <path fill="#acaeae"
-                                    d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z"
-                                    opacity=".3" />
-                            </svg>
+                                We are confident that the literary enthusiasts of Lahore will join us in large numbers
+                                and make this evening a truly memorable success.
+                            </p>
 
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Poetry</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Cultural
+                                    Event</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Urdu
+                                    Literature</span>
+                            </div>
 
+                            <div class="flex items-center text-sm text-gray-500 mb-6">
+                                <i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i>
+                                <span>Punjabi complex, 1-Qaddafi Stadium Ferozpur Road Lahore</span>
+                            </div>
 
-                        </a>
+                            <div class="flex flex-wrap gap-4">
+                                <button onclick="window.location.href='ticket.html'"
+                                    class="px-6 py-3 bg-indigo-900 text-white rounded-lg font-bold hover:bg-indigo-800 transition-colors duration-300">
+                                    Get Ticket
+                                </button>
+                                <button onclick="window.location.href='about.html'"
+                                    class="px-6 py-3 border-2 border-indigo-900 text-indigo-900 rounded-lg font-bold hover:bg-indigo-50 transition-colors duration-300">
+                                    About
+                                </button>
+                                <button onclick="window.location.href='sponsor.html'"
+                                    class="px-6 py-3 bg-gray-100 text-indigo-900 rounded-lg font-bold hover:bg-gray-200 transition-colors duration-300">
+                                    Become a Sponsor
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        </section>
+
+        <!-- Featured Poets Marquee -->
+
+        
+
+        <!-- Previous Highlights Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Previous Highlights</h2>
+                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
+                <div class="grid grid-cols-4 lg:grid-cols-3 gap-8"></div>
+                <!-- Additional content can be added here -->
+            </div>
+        </section>
+        <div class="past">
+            <div class="past-container">
+                <img src="past1.jpg" alt="Past Event 1" class="past-image active">
+                <img src="past2.jpg" alt="Past Event 2" class="past-image">
+                <img src="past3.jpg" alt="Past Event 3" class="past-image">
+                <img src="past4.jpg" alt="Past Event 4" class="past-image">
+                <img src="past5.jpg" alt="Past Event 5" class="past-image">
+            </div>
+
+            <div class="bg-gray-100 p-8 rounded-lg" id="text">
+                <h3 class="text-2xl font-bold mb-4">TarQeem International Mushaira 2025</h3>
+                <p class="text-gray-700 mb-4 italic">Tarqeem UAE, in collaboration with Sharaf Exchange, hosted a truly memorable evening where the magic of words captivated every heart.</p>
+                <p class="text-gray-700 mb-4">
+                    Held on 23rd August 2025 at the Pakistan Social Centre Sharjah, the grand literary gathering brought together renowned poets from the USA, Canada, Qatar, India, and Pakistan, who enthralled the audience with their soulful verses. The evening was further graced by the presence of leading businessmen and CEOs from across the UAE, adding prestige to the occasion.
+                </p>
+                <p class="text-gray-700 mb-4">
+                   The distinguished guests of honor were Dr. Sabahat Asim Wasiti and Mr. Shahabuddin, whose presence added immense value to the event. During the ceremony, eminent poets were presented with honorary shields along with Ajrak, a cultural symbol of Saraiki heritage, as a token of appreciation.
+                </p>
+                <p class="text-gray-700">
+                    The Mushaira not only stood as a shining example of promoting Urdu literature but also carried a powerful message of cultural harmony and community unity.
+                </p>
+            </div>
+        </div>
+
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Our YouTube</h2>
+                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Video 1 -->
+                    <div class="video-container">
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/Og3aTOlTN8U" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-container">
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/c401MyYkmcU" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-container">
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/vf80T43qNVI" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://www.youtube.com/@Tarqeemuae" target="_blank"
+                        class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg font-bold hover:bg-red-700 transition-colors duration-300">
+                        Visit Channel
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">TARQEEM</h3>
+                        <p class="text-gray-400">TarQeem is a Non-Profit Platform in the World</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="sponsor.html" class="text-gray-400 hover:text-white">Sponsor</a></li>
+                            <li><a href="highlight.html" class="text-gray-400 hover:text-white">Highlights</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a href="contact.html" class="text-gray-400 hover:text-white">Help Center</a></li>
+                            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/share/1GBDvV5VxM/" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://youtube.com/@tarqeemuae?si=nEXS72x2WQdeIOIs"
+                                class="text-gray-400 hover:text-white">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tarqeemuae?igsh=c3hodThmZ3U0NnF0"
+                                class="text-gray-400 hover:text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@tarqeemuae?_t=ZS-8yiMYQkTrKi&_r=1"
+                                class="text-gray-400 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-top:5px;"
+                                    viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                                    <title>TikTok icon</title>
+                                    <path fill="#acaeae"
+                                        d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65c-.9-.53-1.71-1.18-2.44-1.9l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z" />
+                                    <path fill="#acaeae"
+                                        d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z"
+                                        opacity=".3" />
+                                </svg>
+
+
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                    <p>&copy; 2023 Tarqeem. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "TarQeem International Mushaira 2025",
+        "description": "Grand Urdu poetry evening in UAE featuring renowned poets from around the world with the theme 'Celebrating the Soul of Urdu'.",
+        "startDate": "2025-08-23T18:00",
+        "endDate": "2025-08-23T22:00",
+        "location": {
+            "@type": "Place",
+            "name": "Pakistan Social Center",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "Sharjah",
+            "addressRegion": "UAE",
+            "postalCode": "",
+            "addressCountry": "United Arab Emirates"
+            }
+        },
+        "image": "https://tarqeeminternational.com/main.jpg",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.tarqeeminternational.com/ticket.html",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2024-06-01"
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "TarQeem",
+            "url": "www.https://tarqeeminternational.com"
+        }
+        }
+        </script>
 
-    <!-- Footer -->
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">TARQEEM</h3>
-                    <p class="text-gray-400">TarQeem is a Non-Profit Platform in the World</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Support</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Connect With Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/share/1GBDvV5VxM/" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://youtube.com/@tarqeemuae?si=nEXS72x2WQdeIOIs"
-                            class="text-gray-400 hover:text-white">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tarqeemuae?igsh=c3hodThmZ3U0NnF0"
-                            class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@tarqeemuae?_t=ZS-8yiMYQkTrKi&_r=1"
-                            class="text-gray-400 hover:text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-top:5px;"
-                                viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-                                <title>TikTok icon</title>
-                                <path fill="#acaeae"
-                                    d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65c-.9-.53-1.71-1.18-2.44-1.9l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z" />
-                                <path fill="#acaeae"
-                                    d="M23.98 0h5.05c.08 2.29.92 4.45 2.39 6.2 1.44 1.74 3.56 2.86 5.83 3.03v5.17a11.72 11.72 0 0 1-6.03-1.65l.03 13.86c0 2.66-1.06 5.21-2.94 7.08a10.02 10.02 0 0 1-7.1 2.94c-2.59 0-5.17-1.03-7.07-2.94A9.97 9.97 0 0 1 8.66 23.8c0-5.55 4.53-10.06 10.07-10.06.7 0 1.39.08 2.07.24v5.27a5.02 5.02 0 0 0-7.07 4.55 5.02 5.02 0 0 0 5.02 5.02c1.38 0 2.65-.55 3.57-1.47a5.04 5.04 0 0 0 1.48-3.55V0z"
-                                    opacity=".3" />
-                            </svg>
-
-
-
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 TarQeem. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <a href="https://wa.me/+971543038254" class="whatsapp-float pulse" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
 

@@ -39,13 +39,33 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
     <style>
-        #herooo {
-            margin-top: 60px;
-            margin-left: 40%;
+        #text {
+            max-width: 60%;
+            margin-top: -5.5%;
+            background-color: rgba(255, 255, 255, 0);
+
+
+        }
+
+        @media (max-width: 1021px) {
+            #text {
+                max-width: 90%;
+                margin-top: 20px;
+            }
+        }
+
+        .herooo {
+            margin-top: -32%;
+            margin-left: 46vw;
+            position: absolute;
         }
 
         #text {
@@ -63,7 +83,49 @@
 
             }
         }
+
+        /* YouTube Videos Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .youtube-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .video-container {
+                margin-bottom: 20px;
+            }
+
+            .video-container:last-child {
+                margin-bottom: 0;
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -86,12 +148,11 @@
                         <li><a class="high" href="highlight.html">Highlights</a></li>
                         <li><a href="sponsor.html">Sponsor</a></li>
                     </ul>
-                    <button class="sign-in-btn" class="block">Get
-                        Ticket</button>
+                    <button class="sign-in-btn" onclick="window.location.href='ticket.html'">Get Ticket</button>
                 </div>
 
                 <!-- Mobile Sign In (visible on mobile) -->
-                <button class="sign-in-btn" style="display: none;" id="mobileSignIn" class="block">Get Ticket</button>
+                <button class="sign-in-btn" style="display: none;" id="mobileSignIn">Get Ticket</button>
 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
@@ -123,15 +184,16 @@
                     </ul>
 
                     <div class="mobile-sign-in">
-                        <button class="sign-in-btn" style="width: 100%; padding: 14px;" class="block"
-                            onclick="closeMobileMenu()">Get
+                        <button class="sign-in-btn" style="width: 100%; padding: 14px;" onclick="closeMobileMenu()">Get
                             Ticket
                         </button>
                     </div>
                 </div>
             </div>
         </header>
-
+        <button class="register-btn" onclick="window.location.href='ticket.html';">
+                    Get Ticket for Free
+                </button>
         <div class="hero-wrapper">
             <section class="hero">
                 <div class="hero-box"></div>
@@ -150,33 +212,29 @@
                     </div>
                 </div>
 
+                <section class="herooo">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900">Our Comming
+                            Event
+                        </h2>
+                        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto text-sm">
+                            Relive the magic of our most recent gathering. Stay tuned for our next event!
+                        </p>
+                        <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-12">
+                        </div>
+                        
+                </section>
 
-
-                <button class="register-btn" onclick="window.location.href='highlight.html';">
-                    View Highlights
-                </button>
-            </section>
         </div>
-        <section id="herooo">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900">Our Latest Successful
-                    Event
-                </h2>
-                <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto text-sm">
-                    Relive the magic of our most recent gathering. Stay tuned for our next event!
-                </p>
-                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-12">
-                </div>
-        </section>
 
         <div id="toast" class="toast hidden">
             <div class="toast-content">
                 <span>Buy Ticket for Free</span>
-                <button class="toast-button" onclick="window.location.href='ticket.html'" class="block">Get
-                    Ticket</button>
+                <button class="toast-button" onclick="window.location.href='ticket.html'">Get Ticket</button>
                 <button class="toast-close">&times;</button>
             </div>
         </div>
+
 
         <section class="py-16 bg-gray-50" id="upcoming-event">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,16 +260,16 @@
                                 </div>
                                 <div>
                                     <p class="text-sm text-gray-500">Event Date</p>
-                                    <p class="font-bold text-gray-800">5 October, 2025</p>
+                                    <p class="font-bold text-gray-800">23 August, 2025</p>
                                 </div>
                             </div>
 
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">TARQEEM INTERNATIONAL MUSHAIRA 2025  (Pakistan Chapter)</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">TARQEEM MUSHAIRA 2025</h3>
                             <p class="text-gray-600 mb-6">
-                                The Tarqeem International Mushaira – Pakistan Chapter was held on October 5, 2025, at the renowned literary institution PILAC, Lahore, marking yet another milestone in Tarqeem’s journey of promoting Urdu literature and poetic excellence.
-
-                                The event was beautifully hosted by Adnan Munawar and Ahmed Ali Kaif, whose elegant coordination and hospitality reflected the true spirit of Tarqeem.
-
+                                Our most recent event was a grand celebration of Urdu poetry with the theme "Celebrating
+                                the Soul of Urdu".
+                                The evening featured renowned poets from around the world and was attended by over 500
+                                poetry enthusiasts.
                             </p>
 
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -224,8 +282,7 @@
 
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i>
-                                <span>Punjabi complex
-1-Qaddafi StadiumFerozpur Road Lahore</span>
+                                <span>Social Center, Sharjah UAE</span>
                             </div>
                         </div>
                     </div>
@@ -272,7 +329,69 @@
         </section>
 
         <!-- Featured Poets Marquee -->
-        
+        <section class="py-12 border-t border-b border-gray-200 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Featured Poets
+                </h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Relive the magic of our most recent gathering. Stay tuned for our next event!
+                </p>
+                <div class="relative h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-yellow-400 mb-16"></div>
+
+                <div class="marquee-pause overflow-hidden">
+                    <div class="people-name1 marquee-animate whitespace-nowrap flex gap-4">
+                        <!-- Poet 1 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image1.jpg" alt="NADEEM BHABHA" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Afzal Khan</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+
+                        <!-- Poet 2 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image2.jpg" alt="GHAZANFAR HASHMI"
+                                class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Dilawar Ali Aazar</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+
+                        <!-- Poet 3 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image3.jpg" alt="AFZAL KHAN" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Shahaz Nayyar</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+
+                        <!-- Poet 4 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image4.jpg" alt="Fareeha Naqvi" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Fareeha Naqvi</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+
+                        <!-- Poet 5 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image5.jpg" alt="Dilawar Ali Aazar"
+                                class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Ghazanfar Hashmi</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+
+                        <!-- Poet 6 -->
+                        <button
+                            class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <img src="image6.jpg" alt="Abbas Qamar" class="w-10 h-10 rounded-full object-cover mr-3">
+                            <span class="font-medium">Nasar Naeem</span>
+                            <span class="ml-4 text-gray-400">→</span>
+                        </button>
+                    </div>
+                </div>
+        </section>
 
         <!-- Previous Highlights Section -->
         <section class="py-16 bg-white">
@@ -293,39 +412,32 @@
             </div>
 
             <div class="bg-gray-100 p-8 rounded-lg" id="text">
-                <h3 class="text-2xl font-bold mb-4">TARQEEM INTERNATIONAL MUSHAIRA 2025  (Pakistan Chapter)</h3>
+                <h3 class="text-2xl font-bold mb-4">TarQeem International Mushaira 2025</h3>
                 <p class="text-gray-700 mb-4 italic">Hosted by Tarqeem UAE in collaboration with Sharaf Exchange</p>
 
                 <p class="text-gray-700 mb-4">
-                    Venue: Punjab Institute of Language, Art & Culture (PILAC), Lahore
-Date: 5 October 2025
-
-
-                    The Tarqeem International Mushaira – Pakistan Chapter was held on October 5, 2025, at the renowned literary institution PILAC, Lahore, marking yet another milestone in Tarqeem’s journey of promoting Urdu literature and poetic excellence.
-                    This grand literary evening proved to be a resounding success, matching the standards of international poetic gatherings. A remarkable lineup of poets presented their finest verses, while Lahore’s discerning and passionate audience responded with overwhelming appreciation, making the evening truly unforgettable.
-
+                    Tarqeem UAE, in collaboration with Sharaf Exchange, hosted a truly memorable evening where the magic
+                    of words captivated every heart.
+                    The grand literary gathering was held on <strong>23rd August 2025</strong> at the Pakistan Social
+                    Centre Sharjah, bringing together renowned poets from the USA, Canada, Qatar, India, and Pakistan,
+                    who enthralled the audience with their soulful verses.
                 </p>
 
                 <p class="text-gray-700 mb-4">
-                    The event commenced with a warm and graceful welcome by Maryam Shahzadi, setting the tone for an evening rich with emotion, expression, and elegance.
-
-The Mushaira was presided over by the distinguished poet Shahid Zaki from Sialkot. Malik Irfan, a special guest who traveled from Dubai, graced the occasion as the Guest of Honour, while Shabbir Hassan (Lahore) was recognized as the Guest of Distinction.
-
+                    The evening was further graced by the presence of leading businessmen and CEOs from across the UAE,
+                    adding prestige to the occasion.
+                    The distinguished guests of honor were <strong>Dr. Sabahat Asim Wasiti</strong> and <strong>Mr.
+                        Shahabuddin</strong>, whose presence added immense value to the event.
                 </p>
 
                 <p class="text-gray-700 mb-4">
-                    The evening’s proceedings were expertly conducted by Shadab Abbasi, whose captivating style of compering kept both the poets and the audience deeply engaged throughout — a performance that added charm and rhythm to the entire session.
-
-The roster of poets included some of the most talented voices of the contemporary era:
-Ammar Iqbal, Sabahat Urooj, Soheel Sani, Shahbaz Nayyar, Raaz Ehtesham, Fayyaz Bostan, Aarb Hashmi, Tajammul Kazmi, Ahmed Abdullah, and Usama Andaleeb.
-Each poet brought their unique style and creative depth, weaving together a magical tapestry of words that enthralled everyone present.
-
+                    During the ceremony, eminent poets were presented with <strong>honorary shields</strong> along with
+                    <strong>Ajrak</strong>, a cultural symbol of Saraiki heritage, as a token of appreciation.
                 </p>
 
                 <p class="text-gray-700">
-                    The event was beautifully hosted by Adnan Munawar and Ahmed Ali Kaif, whose elegant coordination and hospitality reflected the true spirit of Tarqeem.
-
-From impeccable organization to the enthusiastic participation of the audience, every aspect of the Mushaira reflected Lahore’s deep-rooted literary culture. The event stood out for its poetic brilliance, disciplined execution, and vibrant ambiance — establishing itself as a memorable addition to Lahore’s rich poetic tradition.
+                    The Mushaira not only stood as a shining example of promoting Urdu literature but also carried a
+                    powerful message of cultural harmony and community unity.
                 </p>
             </div>
 

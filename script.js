@@ -186,9 +186,9 @@ window.addEventListener('DOMContentLoaded', () => {
 const pastContainer = document.querySelector(".past-container");
 
 // Load past1–past6 dynamically
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 25; i++) {
     const img = document.createElement("img");
-    img.src = `past${i}.jpg`;
+    img.src = `oct-${i}`;
     img.alt = `Past Image ${i}`;
     img.classList.add("past-image");
     pastContainer.appendChild(img);
@@ -366,3 +366,4 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCountdown();
     const countdownInterval = setInterval(updateCountdown, 1000);
 });
+
